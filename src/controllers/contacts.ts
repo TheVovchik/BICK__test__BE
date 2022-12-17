@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 import { contactsService } from '../services/contacts';
 
 class ContactsController {
-  async getContacts(req: Request, res: Response) {
+  async getContacts(res: Response) {
     const contacts = await contactsService.getAll();
     
     res.statusCode = 200;
