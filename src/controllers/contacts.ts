@@ -1,7 +1,7 @@
 'use strict';
 
-import { Request, Response } from "express";
-import { contactsService } from "../services/contacts";
+import { Request, Response } from 'express';
+import { contactsService } from '../services/contacts';
 
 class ContactsController {
   async getContacts(req: Request, res: Response) {
