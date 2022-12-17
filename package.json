@@ -1,6 +1,6 @@
 {
   "type": "commonjs",
-  "name": "product_catalog_api",
+  "name": "bick-be",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.ts",
