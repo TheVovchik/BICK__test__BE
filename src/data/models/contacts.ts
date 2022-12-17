@@ -3,7 +3,7 @@
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../db';
 
-export const Contacts = sequelize.define('Contact',{
+export const Contacts = sequelize.define('Contact', {
   id: {
     type: DataTypes.INTEGER,
     allowNull: false,
