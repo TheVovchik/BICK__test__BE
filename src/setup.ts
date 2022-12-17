@@ -1,4 +1,4 @@
-import { Contacts } from "./data/models/Contacts";
+import { Contacts } from './data/models/contacts';
 
 (async() => {
   await Contacts.sync({ force: true });

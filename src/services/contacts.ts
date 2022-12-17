@@ -1,7 +1,7 @@
 'use strict';
 
 import { Contact } from 'src/types/Contacts';
-import { Contacts } from '../data/models/Contacts';
+import { Contacts } from '../data/models/contacts';
 
 class ContactsService {
   async getAll() {
