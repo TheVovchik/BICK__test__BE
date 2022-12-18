@@ -5,7 +5,6 @@ import { contactsService } from '../services/contacts';
 
 class ContactsController {
   async getContacts(req: Request, res: Response) {
-    console.log(req);
     const contacts = await contactsService.getAll();
     
     res.statusCode = 200;
@@ -17,12 +16,26 @@ class ContactsController {
 
     const contact = await contactsService.getOne(+contactId);
 
+    if (!contact) {
+      res.statusCode = 404;
+      res.json({ error: 'entity doesn\'t exist' });
+
+      return;
+    }
+
     res.statusCode = 200;
     res.json(contact);
   };
 
   async postContact(req: Request, res: Response) {
     const contact = await contactsService.createContact(req.body);
+
+    if (!contact) {
+      res.statusCode = 400;
+      res.json({ error: 'something went wrong' });
+
+      return;
+    }
     
     res.statusCode = 200;
     res.json(contact);
@@ -35,6 +48,13 @@ class ContactsController {
 
     const contact = await contactsService.getOne(+contactId);
 
+    if (!contact) {
+      res.statusCode = 404;
+      res.json({ error: 'entity doesn\'t exist' });
+
+      return;
+    }
+
     res.statusCode = 200;
     res.json(contact);
   };
@@ -46,7 +66,7 @@ class ContactsController {
 
     if (!isDeleted) {
       res.statusCode = 404;
-      res.json({ error: 'entity not Exist' });
+      res.json({ error: 'entity doesn\'t exist' });
 
       return;
     }
