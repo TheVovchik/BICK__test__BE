@@ -8,7 +8,7 @@ const router = express.Router();
 
 app.use(cors());
 app.use(express.json());
-app.use('/', router);
+app.use('/data', router);
 
 router.get('/', contactsController.getContacts);
 router.get('/form/:contactId', contactsController.getContact);
