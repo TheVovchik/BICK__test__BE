@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
-    "start": "ts-node src/createServer.js",
+    "start": "ts-node src/server.ts",
     "setup": "ts-node src/setup.ts",
     "nodemon": "./node_modules/.bin/nodemon src/server.ts",
     "ts-check": "tsc --noEmit --lib ES2015 ./src/*.ts",
