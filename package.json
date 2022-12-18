@@ -1,5 +1,5 @@
 {
-  "type": "commonjs",
+  "type": "module",
   "name": "product_catalog_api",
   "version": "1.0.0",
   "description": "",
