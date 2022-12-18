@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-// import serverless from 'serverless-http';
 import { contactsController } from './controllers/contacts';
 
 const app = express();
@@ -20,4 +19,3 @@ app.listen(5000, () => (
   console.log('server is running')
 ))
 
-// export const handler = serverless(app);
