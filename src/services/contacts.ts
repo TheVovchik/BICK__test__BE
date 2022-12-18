@@ -1,6 +1,6 @@
 'use strict';
 
-import { Contact } from 'src/types/Contacts';
+import { Contact } from '../types/Contacts';
 import { Contacts } from '../data/models/contacts';
 
 class ContactsService {
